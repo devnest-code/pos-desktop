@@ -1,4 +1,4 @@
-_{
+{
   "productName": "DevNest POS",
   "version": "1.0.0",
   "identifier": "com.devnest.pos",
@@ -37,7 +37,6 @@ _{
       "icons/icon.icns",
       "icons/icon.ico"
     ],
-    "identifier": "com.devnest.pos",
     "publisher": "DevNest",
     "copyright": "Copyright © 2024 DevNest",
     "category": "Business",
@@ -49,11 +48,6 @@ _{
       "timestampUrl": "",
       "wix": {
         "language": ["es-ES", "en-US"]
-      },
-      "nsis": {
-        "installerIcon": "icons/icon.ico",
-        "license": null,
-        "languages": ["Spanish", "English"]
       }
     }
   },
