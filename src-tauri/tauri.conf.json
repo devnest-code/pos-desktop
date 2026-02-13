@@ -1,0 +1,70 @@
+{
+  "productName": "DevNest POS",
+  "version": "1.0.0",
+  "identifier": "com.devnest.pos",
+  "build": {
+    "beforeDevCommand": "npm run dev",
+    "devUrl": "http://localhost:5173",
+    "beforeBuildCommand": "npm run build",
+    "frontendDist": "../dist"
+  },
+  "app": {
+    "windows": [
+      {
+        "title": "DevNest POS",
+        "width": 900,
+        "height": 700,
+        "minWidth": 800,
+        "minHeight": 600,
+        "resizable": true,
+        "center": true,
+        "decorations": true,
+        "transparent": false,
+        "fullscreen": false
+      }
+    ],
+    "security": {
+      "csp": null
+    }
+  },
+  "bundle": {
+    "active": true,
+    "targets": ["msi", "nsis"],
+    "icon": [
+      "icons/32x32.png",
+      "icons/128x128.png",
+      "icons/128x128@2x.png",
+      "icons/icon.icns",
+      "icons/icon.ico"
+    ],
+    "identifier": "com.devnest.pos",
+    "publisher": "DevNest",
+    "copyright": "Copyright © 2024 DevNest",
+    "category": "Business",
+    "shortDescription": "Sistema de Punto de Venta",
+    "longDescription": "Sistema completo de punto de venta para tiendas, restaurantes y negocios",
+    "windows": {
+      "certificateThumbprint": null,
+      "digestAlgorithm": "sha256",
+      "timestampUrl": "",
+      "wix": {
+        "language": ["es-ES", "en-US"]
+      },
+      "nsis": {
+        "installerIcon": "icons/icon.ico",
+        "license": null,
+        "languages": ["Spanish", "English"]
+      }
+    }
+  },
+  "plugins": {
+    "updater": {
+      "active": true,
+      "endpoints": [
+        "https://github.com/TU-USUARIO/devnest-pos-desktop/releases/latest/download/{{target}}-{{arch}}.json"
+      ],
+      "dialog": false,
+      "pubkey": "PEGA_TU_CLAVE_PUBLICA_AQUI"
+    }
+  }
+}
